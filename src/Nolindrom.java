@@ -47,8 +47,7 @@ public class Nolindrom {
 			r = reverseLong(n);
 		}
 		return true;
-	}
-	
+	}	
 	
 	private static boolean isPalindrom(long x) {
 		// Checks if an input long is a Palindrom
@@ -67,6 +66,12 @@ public class Nolindrom {
 	
 	
 	
+	
+	/**
+	* Ab hier nur Zusatzaufgabe!
+	*
+	* Macht das gleiche wie die normale Anwendung, aber verwendet Strings um den Long overflow zu vermeiden.
+	**/	
 	
 	private static void specialApp(String x) {
 		// Same thing as regularApp, but using strings to avoid overflow
