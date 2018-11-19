@@ -12,14 +12,17 @@ public class Nolindrom {
 	 * @param args
 	 */
 	public static void main(String[] s) {
-		// Takes an input array and launches the regular Program or the special Program if marked with an "x"
+		// Takes an input array and launches the regular program 
+		// or the special program if marked with an "x".
 		if (s.length > 1) {
 			if (s[1].equals("x")) specialApp(s[0]);
 		} else regularApp(s[0]);
 	}
 	
 	private static void regularApp(String x) {
-		// Searches for each number up to an Input maximum if there is a Palindrom reachable. Prints the number if there is none.
+		// Searches for each number up to an Input maximum 
+		// if there is a Palindrom reachable. 
+		// Prints the number if there is none.
 		long max = Long.parseLong(x);
 		for (long i=1; i <= max; i++) {
 			if (isNolindrom(i)) {
@@ -29,7 +32,9 @@ public class Nolindrom {
 	}
 		
 	private static boolean isNolindrom(long x) {
-		// Searches for an input number if there is a Palindrom reachable with less than 100 iterations and before an long overflow is reached. Returns false if there is a Palindrom.
+		// Searches for an input number if there is a Palindrom reachable 
+		// with less than 100 iterations and before an long overflow is reached. 
+		// Returns false if there is a Palindrom.
 		long n = x;
 		long r = reverseLong(n);
 		int j = 0;
@@ -70,7 +75,8 @@ public class Nolindrom {
 	/**
 	* Ab hier nur Zusatzaufgabe!
 	*
-	* Macht das gleiche wie die normale Anwendung, aber verwendet Strings um den Long overflow zu vermeiden.
+	* Macht das gleiche wie die normale Anwendung, 
+	* aber verwendet Strings um den Long overflow zu vermeiden.
 	**/	
 	
 	private static void specialApp(String x) {
@@ -108,7 +114,8 @@ public class Nolindrom {
 	}
 	
 	private static String addLongStrings(String a, String b) {
-		// Goes char for char through the strings and adds up the digits. Takes rest into the next loop if the sum is over 10.
+		// Goes char for char through the strings and adds up the digits. 
+		// Takes rest into the next loop if the sum is over 10.
 		int rest = 0;
 		int summe = 0;
 		String newStr = "";
